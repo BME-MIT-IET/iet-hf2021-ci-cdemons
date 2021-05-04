@@ -1,4 +1,3 @@
-
 """
 Julius Caesar protected his confidential information by encrypting it using a cipher.
 Caesar's cipher shifts each letter by a number of letters. If the shift takes you
@@ -7,6 +6,8 @@ In the case of a rotation by 3, w, x, y and z would map to z, a, b and c.
 Original alphabet:      abcdefghijklmnopqrstuvwxyz
 Alphabet rotated +3:    defghijklmnopqrstuvwxyzabc
 """
+
+
 def caesar_cipher(s, k):
     result = ""
     for char in s:
@@ -17,3 +18,7 @@ def caesar_cipher(s, k):
             n = ((n - 97 + k) % 26) + 97
         result = result + chr(n)
     return result
+
+
+newabc = caesar_cipher("asdasdasd", 5)
+print(newabc)

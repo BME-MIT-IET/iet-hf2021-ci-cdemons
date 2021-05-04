@@ -9,3 +9,13 @@ Feature: testing out bubble sorting
     Given we run the sort
     When we start the sort on an array of numbers [-45, 56.7, 8532, -8542.53, 54523321]
     Then we will have -8542.53 as first element
+
+  Scenario: test bubble sort #3
+    Given we run the sort
+    When we start the sort on an array of numbers [0]
+    Then we will have 0 as first element
+
+  Scenario: test bubble sort #4
+    Given we run the sort
+    When we start the sort on an array of numbers []
+    Then we will have empty as result
