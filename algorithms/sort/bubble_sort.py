@@ -34,7 +34,3 @@ def bubble_sort(arr, simulation=False):
 
     return arr
 
-
-arr = []
-result = bubble_sort(arr)
-print(result == [])

@@ -19,6 +19,3 @@ def caesar_cipher(s, k):
         result = result + chr(n)
     return result
 
-
-newabc = caesar_cipher("asdasdasd", 5)
-print(newabc)
