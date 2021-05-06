@@ -30,6 +30,11 @@ def step_impl(context):
     array = [-95423814.4, -851, -52.4856324126, -2.54, 26, 99]
     context.result = search.binary_search(array, -2.54)
 
+@when('we start the search for 1 on an array of numbers []')
+def step_impl(context):
+    array = []
+    context.result = search.binary_search(array, 1)
+
 
 @then('we will have 2 as result')
 def step_impl(context):

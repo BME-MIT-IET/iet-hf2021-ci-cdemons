@@ -19,3 +19,8 @@ Feature: testing out binary search
     Given we run the search
     When we start the search for -2.54 on an array of numbers [-95423814.4, -851, -52.4856324126, -2.54, 26, 99]
     Then we will have 3 as result
+
+  Scenario: test binary search #5
+    Given we run the search
+    When we start the search for 1 on an array of numbers []
+    Then we will have None as result
