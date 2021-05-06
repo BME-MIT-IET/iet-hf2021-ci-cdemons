@@ -24,3 +24,13 @@ Feature: testing out caesar cipher
     Given we run the cipher
     When we start the cipher with offset of -3 on alphabet of qwertzuiopasdfghjklyxcvbnm
     Then we will have ntboqwrflmxpacdeghivuzsykj as result
+
+  Scenario: test caesar cipher #6
+    Given we run the cipher
+    When we start the cipher with offset of 8 on alphabet of ""
+    Then we will have "" as result
+
+  Scenario: test caesar cipher #7
+    Given we run the cipher
+    When we start the cipher with offset of 0 on alphabet of abc
+    Then we will have abc as result

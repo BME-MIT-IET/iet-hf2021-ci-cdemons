@@ -22,6 +22,11 @@ def step_impl(context, alphabet):
     context.result = strings.caesar_cipher(alphabet, -3)
 
 
+@when('we start the cipher with offset of 0 on alphabet of {alphabet}')
+def step_impl(context, alphabet):
+    context.result = strings.caesar_cipher(alphabet, 0)
+
+
 @then('we will have {result} as result')
 def step_impl(context, result):
     assert context.result == result
