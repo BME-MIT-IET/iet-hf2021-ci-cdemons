@@ -49,11 +49,13 @@ def time_limit(seconds):
 if __name__ == "__main__":
     mpl.rcParams['toolbar'] = 'None'
 
-    lengths = [int(10 ** (x/2)) for x in range(16)]
+    lengths = [int(10 ** (x/2)) for x in range(17)]
     algs = [sort.quick_sort,
             sort.radix_sort,
             sort.counting_sort,
             sort.selection_sort,
+            sort.bubble_sort,
+            sort.max_heap_sort,
             sort.bucket_sort,
             # for the brave hearted
             sort.gnome_sort,
@@ -73,13 +75,12 @@ if __name__ == "__main__":
             measurement_count = 3
             measurements = np.empty(measurement_count)
             for idx, length in enumerate(lengths):
-                arr = np.random.randint(
-                    pow(10, limit), pow(10, limit+1), length)
+                arr = np.random.randint(pow(10, limit), pow(10, limit+1), length)
                 try:
                     for measurement in range(measurement_count):
                         starttime = timer()
                         try:
-                            with time_limit(20):
+                            with time_limit(30):
                                 sorted = alg(arr)
                         except RecursionError:
                             raise SortFail('Recursion limit', handles)
@@ -111,9 +112,10 @@ if __name__ == "__main__":
         axs[plot].grid()
         axs[plot].title.set_text(
             f'{"Value range: " if limit == 0 else ""}{_get_limit(limit)}-{_get_limit(limit+1)}')
-    fig.legend(handles=handles, loc='upper left')
+    fig.legend(handles=handles, loc='lower left')
     fig.suptitle("Sorting Algortihms", fontsize=20)
     fig.supxlabel("Array length")
     fig.supylabel("Seconds")
+    fig.tight_layout()
     fig.savefig('tests/performance_tests/sorts.png')
     plt.show()
