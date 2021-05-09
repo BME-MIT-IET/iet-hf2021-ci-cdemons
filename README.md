@@ -417,3 +417,21 @@ If you want to uninstall algorithms, it is as simple as:
 
 Thanks to [all the contributors](https://github.com/keon/algorithms/graphs/contributors)
 who helped in building the repo.
+
+## Try the libray in Docker
+
+Start the container with Python.
+```sh
+docker-compose up -d
+```
+
+Connect to the bash terminal inside the running container.
+```sh
+docker-compose exec python bash
+```
+
+Yaay! Now you can run the [tests](https://github.com/BME-MIT-IET/iet-hf2021-ci-cdemons#tests) or start a Python REPL with the following command:
+
+```sh
+python
+```
