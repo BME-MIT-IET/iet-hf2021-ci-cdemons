@@ -31,6 +31,9 @@ jobs:
       - name: Run behave tests
         run: behave
         
+      - name: Run tests
+        run: python3 -m pytest tests
+        
       - name: Generate Report
         run: |
           pip install coverage
