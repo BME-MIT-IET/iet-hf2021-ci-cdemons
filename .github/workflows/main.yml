@@ -25,16 +25,19 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
 
-      - name: Install behave
+      - name: Install requirements
         run: pip3 install -r requirements.txt
       
       - name: Run behave tests
         run: behave
         
+      - name: Run tests
+        run: python3 -m unittest discover tests
+        
       - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m unittest
+          coverage run -m unittest discover tests 
           
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v1
