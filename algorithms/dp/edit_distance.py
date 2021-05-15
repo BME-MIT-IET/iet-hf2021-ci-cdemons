@@ -33,8 +33,6 @@ we need to find edit(m, n), where m is the length of A and n is the length of B.
 
 
 def edit_distance(A, B):
-    # Time: O(m*n)
-    # Space: O(m*n)
 
     m, n = len(A) + 1, len(B) + 1
 
