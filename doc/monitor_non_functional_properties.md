@@ -1,1 +1,0 @@
-#Monitor Non-functional Properties
