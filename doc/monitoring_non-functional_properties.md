@@ -1,8 +1,8 @@
 # Monitoring Non-functional properties
 
-A rendező és kereső algoritmusok futási idejét szerrettük volna megmérni, ehhez perfomance teszteket készítettünk. A végeredményeket pedig diagramokon ábrázoltuk. A diagrammok előállítását és a tesztek futtatását aa rendeyő, valamint kereső algoritmusokra külön-külön python scriptekben vlósítottuk meg.
+A rendező és kereső algoritmusok futási idejét szerettük volna megmérni, ehhez perfomance teszteket készítettünk. A végeredményeket pedig diagramokon ábrázoltuk. A diagrammok előállítását és a tesztek futtatását a rendező, valamint kereső algoritmusokra külön-külön python scriptekben valósítottuk meg.
 
-A teszt megírásához alábbi python könytárakat használtuk fel: 
+A teszt megírásához alábbi python könyvtárakat használtuk fel: 
 - timeit
 - numpy
 - matplotlib
@@ -41,10 +41,10 @@ Maradtak az igazán gyors, O(n*log n)-es algoritmusok.
 - radix
 - counting
 
-#### Érdemes kiemelni egyes algoritmusok a rendezendő szémok méretének növelésével tapasztalt viselkedését.
+#### Érdemes kiemelni egyes algoritmusok a rendezendő számok méretének növelésével tapasztalt viselkedését.
 
 - counting: Míg kis számokra a radix sort algoritmussal egyenértékű, nagyobb számokat más egyáltalán nem képes kezelni.
-- quick: nagyobb számok esetén elújön egy rekurziós mélységből adódó limitáció, bár ez erősen implementáció függő.
+- quick: nagyobb számok esetén előjön egy rekurziós mélységből adódó limitáció, bár ez erősen implementáció függő.
 - bucket: ebben az implementációjában túlcsordulást generál.
 
 
@@ -80,7 +80,7 @@ Igaz, lényegesen gyorsabb mint a linear, de nagyobb elemszámoknál ez is O(n)-
 
 - interpolation search
 
-Sebessége erősen függ a lépésköztől és implementációja tólcsordulást generál.
+Sebessége erősen függ a lépésköztől és implementációja túlcsordulást generál.
 
 - az összes többi
 
@@ -88,5 +88,5 @@ Többnyire szépen viselkedő O(n*log n)-es algoritmusok. Ehhez viszont előre r
 
 ### Megjegyzés
 
-A tesztek kiértékeléséhez egész számokból álló növekvő sörrendbe rendezett, egyenletes elosztású, egyedi számokat tartalmazó tömböket használtunk.
+A tesztek kiértékeléséhez egész számokból álló növekvő sorrendbe rendezett, egyenletes elosztású, egyedi számokat tartalmazó tömböket használtunk.
 
