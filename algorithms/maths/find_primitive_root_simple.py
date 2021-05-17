@@ -8,9 +8,9 @@ Order of certain number may or may not be exist. If so, return -1.
 """
 def find_order(a, n):
     if ((a == 1) & (n == 1)):
-        return 1
         """ Exception Handeling :
         1 is the order of of 1 """
+        return 1
     else:
         if (math.gcd(a, n) != 1):
             print ("a and n should be relative prime!")
@@ -50,18 +50,18 @@ If so, return empty list.
 
 def find_primitive_root(n):
     if (n == 1):
-        return [0]
         """ Exception Handeling :
         0 is the only primitive root of 1 """
+        return [0]
     else:
         phi = euler_totient(n)
         p_root_list = []
         """ It will return every primitive roots of n. """
         for i in range (1, n):
             if (math.gcd(i, n) != 1):
-                continue
                 """ To have order, a and n must be
                 relative prime with each other. """
+                continue
             else:
                 order = find_order(i, n)
                 if (order == phi):

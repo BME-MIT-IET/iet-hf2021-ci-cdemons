@@ -8,9 +8,9 @@ Order of certain number may or may not be exist. If so, return -1.
 """
 def find_order(a, n):
     if ((a == 1) & (n == 1)):
-        return 1
         """ Exception Handeling :
         1 is the order of of 1 """
+        return 1
     else:
         if (math.gcd(a, n) != 1):
             print ("a and n should be relative prime!")
