@@ -3,7 +3,7 @@
 - docker-compose elkészítése az egyszerűbb kezelhetőség érdekében
 - GitHub Actions készítése a Docker Image automatikus elkészítésére
   - megtekinthető DockerHub-on:
-    - https://hub.docker.com/repository/docker/cicdemons/app
+    - https://hub.docker.com/r/cicdemons/app
 
 ## Futtatás Docker-ben
 Konténer elindítása
